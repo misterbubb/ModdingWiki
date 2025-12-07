@@ -187,7 +187,16 @@ export default defineConfig({
                   text: 'Advanced',
                   collapsed: false,
                   items: [
-                    { text: 'Networking', link: '/dev/advanced/networking' },
+                    {
+                      text: 'Networking',
+                      // link: '/dev/advanced/networking/',
+                      collapsed: true,
+                      items: [
+                        { text: 'Dev Tools', link: '/dev/advanced/networking/dev-tools'},
+                        { text: 'Object Behaviour', link: '/dev/advanced/networking/objects'},
+                        { text: 'Global Messaging', link: '/dev/advanced/networking/messaging'},
+                      ]
+                    },
                   ]
                 }
               ]
@@ -268,6 +277,10 @@ export default defineConfig({
                         },
                       ]
                     },
+                    {
+                      text: 'StaticNetcodeLib',
+                      link: '/dev/apis/static-netcode'
+                    }
                   ]
                 }
               ]
