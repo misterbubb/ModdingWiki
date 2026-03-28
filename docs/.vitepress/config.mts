@@ -18,10 +18,11 @@ const xmlRemoveDiffTransformer = transformerNotationMap({
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/ModdingWiki/',
   title: "Crawlspace 2 Modding Wiki",
   description: "A modding wiki for Crawlspace 2",
   head: [
-    ['link', { rel:'icon', href: "/favicon.ico" }],
+    ['link', { rel:'icon', href: "/ModdingWiki/favicon.ico" }],
     ['meta', { property: 'og:site_name', content: "Crawlspace 2 Modding Wiki" }],
     ['meta', { property: 'og:image', content: "https://misterbubb.github.io/ModdingWiki/logo.png" }],
     ['meta', { name: 'theme-color', content: "#ff3600" }]
