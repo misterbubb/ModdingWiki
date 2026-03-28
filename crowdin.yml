@@ -1,7 +1,0 @@
-files:
-  - source: /docs/**/*.md
-    ignore:
-      - /**/navbar.md
-      - /**/assets/
-      - /**/files/
-    translation: /translations/%locale_with_underscore%/%original_path%/%original_file_name%

@@ -2,7 +2,7 @@
 
 A comprehensive modding guide for Crawlspace 2, a VR horror game by Kiririn.
 
-**[📖 View the Wiki](https://crawlspace2.wiki)** | **[💬 Join Discord](https://discord.gg/UApCmJx7U7)** | **[🎮 Get the Game](https://store.steampowered.com/app/2258670/Crawlspace_2/)**
+**[📖 View the Wiki](https://misterbubb.github.io/ModdingWiki/)** | **[💬 Join Discord](https://discord.gg/UApCmJx7U7)** | **[🎮 Get the Game](https://store.steampowered.com/app/2258670/Crawlspace_2/)**
 
 ## About
 
@@ -19,10 +19,10 @@ This wiki provides documentation and tutorials for creating mods for Crawlspace 
 ## Quick Start
 
 ### For Players
-Visit the [Beginner's Guide](https://crawlspace2.wiki/overview) to learn how to install mods.
+Visit the [Beginner's Guide](https://misterbubb.github.io/ModdingWiki/overview) to learn how to install mods.
 
 ### For Developers
-Check out the [Developer's Guide](https://crawlspace2.wiki/dev/overview) to start creating mods.
+Check out the [Developer's Guide](https://misterbubb.github.io/ModdingWiki/dev/overview) to start creating mods.
 
 ## Local Development
 

@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 import { createTitle, normalize } from "vitepress/dist/client/shared.js";
 import { transformerNotationMap } from '@shikijs/transformers';
 
-const HOSTNAME = "https://crawlspace2.wiki";
+const HOSTNAME = "https://misterbubb.github.io/ModdingWiki";
 
 function href(path = "") {
   return new URL(normalize(path), HOSTNAME).href;
@@ -23,7 +23,7 @@ export default defineConfig({
   head: [
     ['link', { rel:'icon', href: "/favicon.ico" }],
     ['meta', { property: 'og:site_name', content: "Crawlspace 2 Modding Wiki" }],
-    ['meta', { property: 'og:image', content: "https://crawlspace2.wiki/logo.png" }],
+    ['meta', { property: 'og:image', content: "https://misterbubb.github.io/ModdingWiki/logo.png" }],
     ['meta', { name: 'theme-color', content: "#ff3600" }]
   ],
   transformPageData(pageData, ctx) {
