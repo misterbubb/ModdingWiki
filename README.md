@@ -1,38 +1,64 @@
-# Lethal Company Modding Guide
+# Crawlspace 2 Modding Wiki
 
-This guide is a fork of [trombone.wiki](https://trombone.wiki).
+A comprehensive modding guide for Crawlspace 2, a VR horror game by Kiririn.
 
-[The guide can be found here!](https://lethal.wiki)
+**[📖 View the Wiki](https://crawlspace2.wiki)** | **[💬 Join Discord](https://discord.gg/UApCmJx7U7)** | **[🎮 Get the Game](https://store.steampowered.com/app/2258670/Crawlspace_2/)**
 
-## Developer Guide
+## About
 
-[Vitepress Guide](https://vitepress.dev/guide/getting-started)
+This wiki provides documentation and tutorials for creating mods for Crawlspace 2 using BepInEx and Harmony. Whether you're installing mods or creating your own, this guide has you covered.
 
-To install dependencies:
-```shell
+### What's Included
+
+- **Installation Guides** - How to install and configure mods
+- **Developer Tutorials** - Step-by-step guides for creating mods
+- **Code Examples** - Real, working examples using actual game classes
+- **Best Practices** - Tips for creating quality mods
+- **API Documentation** - Overview of available modding APIs
+
+## Quick Start
+
+### For Players
+Visit the [Beginner's Guide](https://crawlspace2.wiki/overview) to learn how to install mods.
+
+### For Developers
+Check out the [Developer's Guide](https://crawlspace2.wiki/dev/overview) to start creating mods.
+
+## Local Development
+
+To run the wiki locally:
+
+```bash
+# Install dependencies
 npm ci
-```
 
-Run a preview of the wiki locally:
-```shell
+# Start dev server
 npm run dev
-```
 
-Build the wiki into `docs/.vitepress/dist`:
-```shell
+# Build for production
 npm run build
 ```
 
-## Licensing / Credits
+The dev server will be available at http://localhost:5173/
 
-This wiki contains content from the following wikis, and would not be possible without contributions from them:
+## Contributing
+
+Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+Found an issue? [Open an issue](https://github.com/misterbubb/ModdingWiki/issues) or join the [Discord](https://discord.gg/UApCmJx7U7).
+
+## Credits
+
+This wiki is adapted from the [Lethal Company Modding Wiki](https://lethal.wiki), which contains content from:
+- [Lethal Company Modding Wiki](https://lethal.wiki)
 - [trombone.wiki](https://github.com/tc-mods/TromboneChampModdingWiki)
 - [Gorilla Tag Modding Guide](https://github.com/burritosoftware/GorillaTag-Modding-Guide)
 - [bsmg.wiki](https://github.com/bsmg/wiki)
 
-The content of this wiki is licensed under the [ISC License](https://github.com/LethalCompany/ModdingWiki/blob/master/LICENSE.md).
+All code examples and Crawlspace 2-specific content have been verified against the actual game.
 
-Vitepress wiki build pages are based on [bsmg.wiki](https://bsmg.wiki), which is licensed under the [MIT LICENSE](https://github.com/bsmg/wiki/blob/master/LICENSE).
+## License
 
-Some content on the pages `beginners-guide.md` and `index.md` are based on the content of [bsmg.wiki](https://bsmg.wiki), which is licensed under the [Creative Commons BY-NC-SA 4.0 License](https://github.com/bsmg/wiki/blob/master/wiki/LICENSE).
+The content of this wiki is licensed under the [ISC License](LICENSE.md).
 
+VitePress build configuration is based on [bsmg.wiki](https://bsmg.wiki), licensed under the [MIT LICENSE](https://github.com/bsmg/wiki/blob/master/LICENSE).

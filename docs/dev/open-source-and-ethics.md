@@ -1,7 +1,7 @@
 ---
 prev: true
 next: true
-description: A basic overview of the Open Source approach used by the Lethal Company modding community.
+description: A basic overview of the Open Source approach used by the modding community.
 ---
 
 # Open-source and ethics

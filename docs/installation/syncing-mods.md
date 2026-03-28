@@ -32,7 +32,7 @@ This will copy a code to your clipboard automatically - you can send this to you
 
 ### Importing a Profile
 
-1. Click **"Import/Update"** in the **Profile selection** area after selecting Lethal Company in r2modman.
+1. Click **"Import/Update"** in the **Profile selection** area after selecting Crawlspace 2 in r2modman.
 
 ![Importing Profile](/images/r2modman-install/importprofile.png)
 

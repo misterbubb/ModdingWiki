@@ -1,24 +1,19 @@
 ---
 prev: true
 next: false
-description: Learn how to prepare your finished Lethal Company mod and upload it to thunderstore.
+description: Learn how to prepare your finished Crawlspace 2 mod and upload it to thunderstore.
 ---
 
 # Publishing your mod
 
 There are a number of options for releasing your mods, such as different modding websites.
 
-However, the wider Lethal Company modding community has primarily targeted the [Thunderstore](https://thunderstore.io/c/lethal-company/). Hence, we will focus on publishing to this website.
+However, the wider modding community has primarily targeted the [Thunderstore](https://thunderstore.io/). Hence, we will focus on publishing to this website.
 
 There are a number of reasons we recommend this:
 - Thunderstore has a mod manager, and is used by the open-source R2ModMan mod manager -- this makes it significantly easier for users to find and install mods
 - If the entire modding community targets the same modding website, that means mods are less scattered in different locations
 - It makes it easier for the modding community to provide help (such as this wiki), compared to supporting multiple different platforms
-
-<!-- ## Mod websites -->
-<!-- - https://www.moddb.com/games/lethal-company -->
-<!-- - https://www.nexusmods.com -->
-<!-- - https://mod.io/g **(Not available currently, since Lethal Company has not been registered there yet)** -->
 
 ## Using Thunderstore
 
@@ -32,7 +27,7 @@ Then, go to the "Teams" tab, and click on "Create Team":
 
 We recommend using your username as team name, unless you actually have a team and an agreed-upon name for it.
 
-To upload a mod for Lethal Company, you'll first want to go to the [Lethal Company category](https://thunderstore.io/c/lethal-company/).
+To upload a mod, you'll first want to go to the appropriate Thunderstore category for your game.
 
 All you need to do here is press the "Upload" button, which you can find at the top left:
 
@@ -44,7 +39,7 @@ You'll be met with the following page:
 
 A mod needs to be a specific format to be valid for the Thunderstore. This allows them to present your description, image, and other properties to the users.
 
-The documentation on this format can be found [here](https://thunderstore.io/c/lethal-company/create/docs/).
+The documentation on this format can be found on the [Thunderstore package format documentation](https://thunderstore.io/package/create/docs/).
 
 For those who want a short explanation, however, you'll want to create a folder with the following:
 - icon.png (PNG icon for the mod, must be 256x256 resolution)
@@ -55,12 +50,12 @@ For those who want a short explanation, however, you'll want to create a folder 
 Below is an example of a manifest:
 ```json
 {
-    "name": "MoonOfTheDay",
-    "version_number": "1.0.3",
-    "website_url": "https://github.com/MaxWasUnavailable/MoonOfTheDay",
+    "name": "MyAwesomeMod",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/YourUsername/MyAwesomeMod",
     "description": "This is a description for a mod. 250 characters max",
     "dependencies": [
-        "LethalAPI-1.0.0"
+        "BepInEx-BepInExPack-5.4.2100"
     ]
 }
 ```
@@ -83,7 +78,3 @@ Once you're done with all of this, happy with the way your README [will look](ht
 ## Updating on Thunderstore
 
 To update a mod on the Thunderstore, you'll need to repeat the upload process. **Make sure you have increased the version in your `manifest.json` file!**
-
-# Discord
-
-- The [Unofficial Lethal Company Community](https://discord.gg/nYcQFEpXfU) has a [#mod-releases](https://discord.com/channels/1169792572382773318/1169851544359927858) channel.

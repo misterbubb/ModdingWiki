@@ -5,7 +5,11 @@ description: An overview of how to create and load asset bundles in your plugin.
 ---
 
 # Asset Bundling
-In order to add custom assets to your mods, you will need to create an asset bundle and load it with your plugin code. In order to do this, you will need to have a Unity project with your assets contained in it. Using the [Lethal Company Unity template project](https://github.com/EvaisaDev/LethalCompanyUnityTemplate/tree/main#readme) is recommended so you can use scripts from the game in your prefabs.
+In order to add custom assets to your mods, you will need to create an asset bundle and load it with your plugin code. In order to do this, you will need to have a Unity project with your assets contained in it.
+
+::: info
+Crawlspace 2 uses Unity 2021.3.3f1. Make sure your Unity project matches this version for compatibility.
+:::
 
 ## Marking Assets For Bundling
 Once you have the custom assets you want to include in a bundle, you have to mark them to be included in the asset bundle. This can be done by selecting your asset in Unity, and in the inspector window at the bottom either selecting or creating a new bundle name.
@@ -40,6 +44,6 @@ private void Awake() {
 
 You can now access it via plugin code to do whatever you need to, such as spawning it in, registering it in the network manager, or whatever else you might need to do like so:
 ```cs
-Item MyTestItem = SCPCBAssets.LoadAsset<Item>("assets/Mods/TestItem");
+GameObject MyCustomObject = MyCustomAssets.LoadAsset<GameObject>("assets/Mods/MyObject");
 ```
 As a final note, make sure you include your asset bundle alongside the .dll of your mod when publishing.

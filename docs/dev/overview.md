@@ -1,7 +1,7 @@
 ---
 prev: false
 next: true
-description: Start creating modifications to Lethal Company to enhance everyone's experience.
+description: Start creating modifications to Crawlspace 2 to enhance everyone's experience.
 ---
 
 # Developer's Guide {#guide}
@@ -9,7 +9,7 @@ description: Start creating modifications to Lethal Company to enhance everyone'
 Welcome to the Developer's Guide! This is an overview of everything included in the guide. For more details, head to the specific sections on the sidebar.
 
 ::: tip
-If you don't know how to code but want to add a custom Asset - whether that be sounds, scrap, suits, and more - there are APIs for that!
+If you don't know how to code but want to add custom assets - whether that be sounds, models, or other content - there are APIs for that!
 The [Asset API list](/dev/apis/overview#asset-apis) has you covered!
 :::
 
@@ -25,9 +25,7 @@ Ready to publish your mod? Don't worry, we've [got you set](/dev/publishing-your
 
 ## Advanced Topics
 
-These are advanced topics relating to the game. They vary from simpler topics, such as creating config files, to more advanced topics, such as networking. 
-
-Need to add networking to your mod? It's a _doozy_, but we're here to help you! Just head on over to the [custom networking](/dev/advanced/networking) article.
+These are advanced topics relating to the game, such as creating config files and working with asset bundles.
 
 ## Asset & Programming APIs {#apis}
 

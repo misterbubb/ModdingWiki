@@ -1,7 +1,7 @@
 ---
 prev: true
 next: true
-description: Learn how to create a basic project for a Lethal Company mod.
+description: Learn how to create a basic project for a Crawlspace 2 mod.
 ---
 
 # Starting a mod
@@ -16,66 +16,41 @@ This guide follows certain parts of the [official BepInEx guide](https://docs.be
 
 ### Using the template repository (Harmony Only) {#using-template-repo}
 
-::: danger Outdated Template
-The linked GitHub template repository may be **stale**. Refer to the Lethal Company Modding Discord server if you encounter issues using it.
+::: info
+You can create a basic BepInEx plugin template for Crawlspace 2 modding. While there isn't a Crawlspace 2-specific template yet, you can use the standard BepInEx template and adapt it for Crawlspace 2.
 :::
 
-[Distractic's template](https://github.com/Distractic/LethalCompanyTemplate) is the current recommended GitHub template. 
-If you're remotely familiar with GitHub, or willing to [learn](/dev/initial-setup#creating-a-github-account), this might serve as a quick start. 
-It does come with some minor drawbacks such as it using "LethalCompanyTemplate" as project name in a number of files; however, it should build out-of-the-box with no edits required. 
-
-It is important that you remove all unused template code from the project before distributing your mod.
+If you're familiar with GitHub, you can use a template repository as a quick start. It is important that you remove all unused template code from the project before distributing your mod.
 
 ### Using the dotnet template {#using-dotnet-template}
 
-First things first, you'll need to create your project. If you've not done so already, we recommend running the following command in a console to add some Lethal Company templates for new projects:
-
-```shell
-dotnet new -i Xilophor.LCModTemplates
-```
+First things first, you'll need to create your project. You can create a standard C# Class Library project targeting .NET Framework 4.7.2 for Crawlspace 2 modding.
 
 Next, you'll want to create a new project (sometimes called "solution", in CSharp). There are two main ways to do this.
 
 #### Using an IDE (easier) {#using-ide}
 
-Depending on your IDE, this process will look slightly different. You'll want to give the solution the name of your soon-to-be mod. If given the option to use a template (you may want to google for *"how to use template in Visual Studio"* or *"how to use template in Rider"*), use the `Lethal Company Harmony Mod Template`.
+Depending on your IDE, this process will look slightly different. You'll want to give the solution the name of your soon-to-be mod. Create a new C# Class Library project targeting .NET Framework 4.7.2.
 
 #### Using the console (recommended for control) {#using-console}
 
-Alternatively, you can open a console and run the following command, assuming you've set up the templates using the command above.
-Replace `MyFirstMod` with your mod's name, and `MyName` with your username:
+Alternatively, you can open a console and create a new Class Library project. Replace `MyFirstMod` with your mod's name:
 
 ```shell
-dotnet new lcharmony -n MyFirstMod -M MyName.MyFirstMod
-```
-
-To see the other options provided in the mod template, you can use the following command:
-
-```shell
-dotnet new lcharmony --help
+dotnet new classlib -n MyFirstMod -f net472
 ```
 
 #### Note for MonoMod users {#monomod-template}
 
-:::details MonoMod Template
-If you want to use MonoMod, you can instead use the `Lethal Company MonoMod Mod Template` in your IDE or use `lcmonomod` instead of `lcharmony` in the console.
+:::details MonoMod vs Harmony
+Crawlspace 2 mods typically use Harmony for patching (as seen in the multiplayer mod). MonoMod is an alternative patching framework that's also compatible with BepInEx.
 
-This template has an additional argument/setting for MonoMod specifically. In VS, it can be seen under MMHOOKLocation, and in the console, it's set with the `-MM` argument.
-This argument/setting is to set the MMHOOK directory to use for hooking (i.e. the HookGen "plugin").
-
-Without changing this setting, you will have to manually hook instead of using the `On.Class.Method += CustomMethod;` style provided by HookGen.
-
-Example command line usage with a path of `C:\path\to\r2modman\LethalCompany\profiles\test\BepInEx\plugins\MMHOOK\`:
-
-```shell
-dotnet new lcmonomod -n MyFirstMod -M MyName.MyFirstMod -MM "C:\path\to\r2modman\LethalCompany\profiles\test\BepInEx\plugins\MMHOOK"
-```
-
+For most Crawlspace 2 modding, Harmony is recommended as it's well-documented and widely used.
 :::
 
 ### Organising your modding projects {#organize-project}
 
-We recommend creating a folder somewhere easily accessible that will store all of your future modding projects. Something like "LethalCompanyMods". Move the newly created folder for your mod into this folder, to keep things well-organised.
+We recommend creating a folder somewhere easily accessible that will store all of your future modding projects. Something like "Crawlspace2Mods". Move the newly created folder for your mod into this folder, to keep things well-organised.
 
 ### Adding NuGet source {#add-nuget}
 
@@ -133,9 +108,9 @@ This should result in a complete file resembling the following:
 
 Mods are developed for specific versions of Unity and .NET, which can be specified in a configuration file. This file is a `.csproj` file, and has as name the name of your mod (e.g. `MyFirstPlugin.csproj`). If you used the console command correctly, it should work out of the box. However, you'll want to double check this to prevent any easy-to-fix problems that can result from not having it set up correctly. When using an IDE, the template might not use the correct version, so in this case you'll definitely have to check things.
 
-Our [template project](https://github.com/LethalCompany/LethalCompanyTemplate) has an example `.csproj` file that is properly configured, which can be found [here](https://github.com/LethalCompany/LethalCompanyTemplate/blob/main/LethalCompanyTemplate/LethalCompanyTemplate.csproj). Please check and compare your local mod's file with this file, and make sure the following segment is the same (except for the `AssemblyName`, `Description`, and `Version`).
-
-![Example csproj with Nuget references and proper metadata](/images/starting-a-mod/csprojexample.png)
+::: info
+Crawlspace 2 uses Unity 2021.3.3f1. Make sure your project targets the appropriate .NET version (.NET Framework 4.7.2) and Unity version to ensure compatibility.
+:::
 
 ### "Building" your mod
 
@@ -171,9 +146,7 @@ To actually use the game's methods and classes, you'll need to add the game's `A
 
 You will very likely also need the `UnityEngine.dll`, since this is required to use any of Unity's methods and classes.
 
-The [template project](https://github.com/LethalCompany/LethalCompanyTemplate) has both of these set up, so you can copy that part of the `.csproj` file. You **will** need to edit the path to be correct, however.
-
-The assemblies can be found in the `Lethal Company_Data/Managed` folder, in the game's directory.
+The assemblies can be found in the game's data folder at `VRFighter_Data/Managed`.
 
 ::: tip
 To easily access private fields and methods in the game's code, you should publicize it! The process is easy, with just two additions:

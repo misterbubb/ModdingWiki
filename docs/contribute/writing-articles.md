@@ -1,20 +1,18 @@
 ---
 prev: false
 next: false
-description: How to contribute new articles to the wiki.
+description: How to contribute new articles to the Crawlspace 2 modding wiki.
 ---
 
 # Contributing Articles
 
-Thank you for deciding to contribute articles to this wiki! The only way this wiki has come this far, and for it to continue to grow is through contributions.
-
-This guide will help you write, format, and implement your article into the wiki.
+Thank you for deciding to contribute articles to this wiki! This guide will help you write, format, and implement your article into the wiki.
 
 ## Forking the GitHub Repository {#forking-the-repo}
 
-In order to send a Pull Request (PR) to the wiki to request your article to be added, you have to fork the [ModdingWiki repository](https://github.com/LethalCompany/ModdingWiki) (repo). 
+In order to send a Pull Request (PR) to the wiki to request your article to be added, you have to fork the [ModdingWiki repository](https://github.com/LethalCompanyCommunity/ModdingWiki) (repo). 
 
-To fork the wiki, it's fairly simple. You'll click the `Fork` button on the webpage, then click `Create fork`.
+To fork the wiki, click the `Fork` button on the webpage, then click `Create fork`.
 
 ![GitHub Fork Repo Button](/images/writing-articles/forkgithubrepobutton.png)
 
@@ -287,10 +285,10 @@ Directory references start from `/docs/`, so don't add `/docs/` to references wh
 
 #### Links
 
-Using [markdown syntax](https://www.markdownguide.org/basic-syntax/#links), a link is as simple as wrapping the text in brackets and adding the link in parenthesis. For example, to link to the Wikipedia article on Lethal Company, one could do the following:
+Using [markdown syntax](https://www.markdownguide.org/basic-syntax/#links), a link is as simple as wrapping the text in brackets and adding the link in parenthesis. For example, to link to the Steam page for Crawlspace 2, one could do the following:
 
 ```md
-Look at [this Wikipedia article](https://en.wikipedia.org/wiki/Lethal_Company) for basic info about the game.
+Look at [this Wikipedia article](https://en.wikipedia.org/wiki/Crawlspace_2) for basic info about the game.
 ```
 
 To specifically link to another article in this wiki, you should use a `relational link` instead of a `hard link`. A `relational link` is the file directory, whereas a `hard link` is the actual website URL.
@@ -298,11 +296,11 @@ To specifically link to another article in this wiki, you should use a `relation
 To link to another article, say the `Contributing Translations` article, you use the following syntax:
 
 ```md
-[text](/contribute/translating-the-wiki)
+[text](/contribute/writing-articles)
 ```
 
 ::: warning
-Do not use file extensions in the `relational link` for webpages/articles, doing so can lead to un-clean URLs (ex. translating-the-wiki.html)
+Do not use file extensions in the `relational link` for webpages/articles, doing so can lead to un-clean URLs (ex. writing-articles.html)
 :::
 
 To link to a specific heading, you can add `#heading-anchor` to the link, where `heading-anchor` is the specific heading anchor you want to use. To find what anchor to use, click on the heading, and see what anchor is in the URL.
@@ -397,7 +395,7 @@ There, you can create the pull request (PR) via the button in the top right:
 
 ![Create a Pull Request](/images/writing-articles/createpullrequestbutton.png)
 
-Finally, you can select the branch you used on the right for head/compare, and the `main` branch in `LethalCompany/ModdingWiki` for base. If you can't see your fork as an option, click on `compare across forks`.
+Finally, you can select the branch you used on the right for head/compare, and the `main` branch in `LethalCompanyCommunity/ModdingWiki` for base. If you can't see your fork as an option, click on `compare across forks`.
 
 ![Pull Request Selection Dialog](/images/writing-articles/createpullrequestdialog.png)
 

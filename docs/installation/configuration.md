@@ -1,13 +1,13 @@
 ---
 prev: true
-next: false
-description: Learn how to use r2modman to change the configuration of Lethal Company mods. 
+next: true
+description: Learn how to use r2modman to change the configuration of Crawlspace 2 mods. 
 ---
 # Configuring mods
 Some mods have custom config files that allow you to change how the mod behaves.
 
 ::: warning
-Config files  **will not be generated** until the mod is loaded ingame **at least once**. If you just installed a new mod and need to configure it, start the game modded once!
+Config files **will not be generated** until the mod is loaded ingame **at least once**. If you just installed a new mod and need to configure it, start the game modded once!
 :::
 
 ## Changing Mod Configs with r2modman

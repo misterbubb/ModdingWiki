@@ -66,14 +66,15 @@ Now that we done that, we can access the Logger!
 
 ## Using the Logger
 
-So, you have a patch and want to log info to the console during it. For example, we want to log the item name when an item is picked up. We can patch the `GrabbableObject.EquipItem` method, and then get the item's name:
+So, you have a patch and want to log info to the console during it. For example, we want to log when a flashlight is toggled. We can patch the `FlashlightControl` class and log the state:
 
 ```csharp
 [HarmonyPostfix]
-[HarmonyPatch(typeof(GrabbableObject), nameof(GrabbableObject.EquipItem))]
-private void EquipItemPostfix(GrabbableObject __instance)
+[HarmonyPatch(typeof(FlashlightControl), "Update")]
+private void FlashlightUpdatePostfix(FlashlightControl __instance)
 {
-    var itemName = __instance.itemProperties.itemName;
+    // Example: Log flashlight state changes
+    // var isOn = __instance.flashlightOn;
 }
 ```
 
@@ -81,11 +82,12 @@ Now we can log it! To do so, we just add one line:
 
 ```csharp
 [HarmonyPostfix]
-[HarmonyPatch(typeof(GrabbableObject), nameof(GrabbableObject.EquipItem))]
-private void EquipItemPostfix(GrabbableObject __instance)
+[HarmonyPatch(typeof(FlashlightControl), "Update")]
+private void FlashlightUpdatePostfix(FlashlightControl __instance)
 {
-    var itemName = __instance.itemProperties.itemName;
-    Plugin.Logger.LogDebug(itemName); // [!code ++]
+    // Example: Log flashlight state changes
+    // var isOn = __instance.flashlightOn;
+    Plugin.Logger.LogDebug("Flashlight update called"); // [!code ++]
 }
 ```
 

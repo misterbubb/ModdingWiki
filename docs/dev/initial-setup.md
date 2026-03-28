@@ -1,13 +1,13 @@
 ---
 prev: true
 next: true
-description: Learn how to install all the necessary prerequisites to get started with creating Lethal Company mods.
+description: Learn how to install all the necessary prerequisites to get started with creating Crawlspace 2 mods.
 ---
 
 # Initial Setup
 
 ::: tip
-If you can't code and want to create a mod that does one common, simple thing (such as adding a suit or sound replacement) make sure to check the [Asset Modding APIs](/dev/apis/overview#asset-apis) section!
+If you can't code and want to create a mod that does one common, simple thing (such as adding custom assets or sound replacements) make sure to check the [Asset Modding APIs](/dev/apis/overview#asset-apis) section!
 
 Many common use cases already have APIs that allow you to easily add content without using any code.
 :::
@@ -54,7 +54,11 @@ If you already have Visual Studio installed, you'll want ensure you're on Visual
 ### BepInEx
 To actually load mods into the game, we need a mod loader. This is where BepInEx comes in! **Be**pis **In**jector **Ex**tensible is a patcher/plug-in framework for Unity games. It'll handle everything related to getting the plugin to actually load into the game, so we can focus on creating the plugin without having to worry about anything else.
 
-You'll first want to install BepInEx to your game. Follow their great [installation guide](https://docs.bepinex.dev/articles/user_guide/installation/index.html) to get this done. You'll want [this](https://github.com/BepInEx/BepInEx/releases/download/v5.4.22/BepInEx_x64_5.4.22.0.zip) version of BepInEx.
+You'll first want to install BepInEx to your game. Follow their great [installation guide](https://docs.bepinex.dev/articles/user_guide/installation/index.html) to get this done. You'll want [this](https://github.com/BepInEx/BepInEx/releases/download/v5.4.22/BepInEx_x64_5.4.22.0.zip) version of BepInEx for PC.
+
+::: info
+Crawlspace 2 is built with Unity 2021.3.3f1 and uses .NET Framework 4.7.2. The game is a single-player VR title available on Steam for Windows. Use the standard BepInEx x64 build for modding.
+:::
 
 Once installation is complete, boot up the game once to have it generate some configuration files. Then, refresh the folder you just installed BepInEx into, and go into the `BepInEx/config` folder. Here, you'll find a file named `BepInEx.cfg`. Open it, and find the `[Logging.Console]` section and make the following changes:
 

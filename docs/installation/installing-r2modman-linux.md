@@ -1,13 +1,12 @@
 ---
 prev: false
 next: false
-description: Learn how to use r2modman to install Lethal Company mods from Thunderstore on Linux. 
+description: Learn how to use r2modman to install Crawlspace 2 mods from Thunderstore on Linux. 
 ---
 
 # Using r2modman on Linux and Steam Deck
----
 
-This guide will run you through installing and using [r2modman](https://github.com/ebkr/r2modmanPlus/releases/latest/) to install and play with mods that are available through [Thunderstore](https://thunderstore.io/c/lethal-company/). Using a mod manager like r2modman allows you to update and play with the latest versions of the mods with ease as the manager does all of that for you!
+This guide will run you through installing and using [r2modman](https://github.com/ebkr/r2modmanPlus/releases/latest/) to install and play with mods that are available through [Thunderstore](https://thunderstore.io/). Using a mod manager like r2modman allows you to update and play with the latest versions of the mods with ease as the manager does all of that for you!
 
 ## Steam Deck Specific Preparation
 On Steam Deck you will need to do the following before you can follow this guide:
@@ -45,13 +44,11 @@ Once you have succesfully installed r2modman, you can finally install mods.
 
 ![r2modman Game Selection Screen](/images/r2modman-install/gameselection.png)
 
-2. Select **"Lethal Company"**, and click **"Select Game"**.
+2. Select **"Crawlspace 2"**, and click **"Select Game"**.
 
 ::: tip
- If you do not see it, **use the search bar or scroll down** to find "Lethal Company".
+If you do not see it, **use the search bar** to find "Crawlspace 2". If Crawlspace 2 is not yet available in r2modman, you may need to manually install BepInEx and mods.
 :::
-
-![Select Lethal Company](/images/r2modman-install/selectlc.png)
 
 3. It will ask you to choose which profile to use. For this guide's purposes, we will stick with the Default profile. Click **"Select profile"**.
 
@@ -61,7 +58,7 @@ Once you have succesfully installed r2modman, you can finally install mods.
 
 ![First Time Opening Installed](/images/r2modman-install/firsttimeinstall.png)
 
-5. Click **"Online"** on the sidebar. This will bring up a list of all available to download mods on [Thunderstore](https://thunderstore.io/c/lethal-company/).
+5. Click **"Online"** on the sidebar. This will bring up a list of all available to download mods on [Thunderstore](https://thunderstore.io/).
 
 ![Clicking Online](/images/r2modman-install/selectonline.png)
 
@@ -75,9 +72,7 @@ Once you have succesfully installed r2modman, you can finally install mods.
 
 8. Once you are done installing your mods, you may click on "Start modded" on the sidebar. This will launch the game with your mods.
 
-![Start Lethal Company Modded](/images/r2modman-install/startmodded.png)
-
-That's it! You have just successfully modded Lethal Company!
+That's it! You have just successfully modded Crawlspace 2!
 
 ## Using r2modman in Steam Deck's Game Mode
 **r2modman will not work in Steam Deck's Game Mode by default.** Steam will not run .appimage files by default and will require 3rd party software in order to allow this. The following instructions will walk you through the process.
@@ -138,9 +133,9 @@ Return to `Game Mode` and locate r2modman, usually located under the `Non-Steam`
 If you prefer to load r2modman from desktop mode or wish to run default mods without loading r2modman, right-click the game in Steam and click `Properties`. From there, paste the following into **Launch Options**:
 
 ```
-WINEDLLOVERRIDES="winhttp=n,b" %command% --doorstop-enable true --doorstop-target "/home/deck/.config/r2modmanPlus-local/LethalCompany/profiles/Default/BepInEx/core/BepInEx.Preloader.dll" --r2profile "Default"
+WINEDLLOVERRIDES="winhttp=n,b" %command% --doorstop-enable true --doorstop-target "/home/deck/.config/r2modmanPlus-local/Crawlspace2/profiles/Default/BepInEx/core/BepInEx.Preloader.dll" --r2profile "Default"
 ```
-![Steam Properties](/images/r2modman-linux/steamproperties.png)
+
 This will instruct the game to launch with the Default profile we configured in r2modman earlier, so all your mods installed there will be available.
 
 If you'd like to sync your mods with friends, navigate to the [syncing r2modman profiles](syncing-mods) page.

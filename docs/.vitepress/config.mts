@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 import { createTitle, normalize } from "vitepress/dist/client/shared.js";
 import { transformerNotationMap } from '@shikijs/transformers';
 
-const HOSTNAME = "https://lethal.wiki";
+const HOSTNAME = "https://crawlspace2.wiki";
 
 function href(path = "") {
   return new URL(normalize(path), HOSTNAME).href;
@@ -18,12 +18,12 @@ const xmlRemoveDiffTransformer = transformerNotationMap({
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Lethal Company Modding Wiki",
-  description: "A modding wiki for lethal company",
+  title: "Crawlspace 2 Modding Wiki",
+  description: "A modding wiki for Crawlspace 2",
   head: [
     ['link', { rel:'icon', href: "/favicon.ico" }],
-    ['meta', { property: 'og:site_name', content: "Lethal Company Modding Wiki" }],
-    ['meta', { property: 'og:image', content: "https://lethal.wiki/logo.png" }],
+    ['meta', { property: 'og:site_name', content: "Crawlspace 2 Modding Wiki" }],
+    ['meta', { property: 'og:image', content: "https://crawlspace2.wiki/logo.png" }],
     ['meta', { name: 'theme-color', content: "#ff3600" }]
   ],
   transformPageData(pageData, ctx) {
@@ -99,18 +99,7 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Beginner\'s Guide', link: '/overview.md' },
-      { text: 'Developer\'s Guide', link: '/dev/overview.md' },
-      {
-        text: 'Discord',
-        items: [
-          {
-            items: [
-              { text: 'Community Discord', link: 'https://discord.gg/nYcQFEpXfU' },
-              { text: 'Modding Discord', link: 'https://discord.gg/XeyYqRdRGC' },
-            ]
-          }
-        ]
-      }
+      { text: 'Developer\'s Guide', link: '/dev/overview.md' }
     ],
 
     sidebar: {
@@ -129,8 +118,7 @@ export default defineConfig({
             {
               text: 'Other Resources',
               items: [
-                {text: 'Frequently Asked Questions', link: '/extras/faq'},
-                { text: 'Contributing Translations', link: '/contribute/translating-the-wiki' },
+                { text: 'Frequently Asked Questions', link: '/extras/faq'},
                 { text: 'Contributing Articles', link: '/contribute/writing-articles' },
                 {text: 'About', link: '/extras/about'}
               ]
@@ -165,12 +153,7 @@ export default defineConfig({
                     { text: "Reading Game Code", link: '/dev/fundamentals/reading-game-code'},
                       { 
                         text: "Patching Code",
-                        link: '/dev/fundamentals/patching-code',
-                        collapsed: true,
-                        items: [
-                          { text: "MonoMod Examples", link: '/dev/fundamentals/patching-code/monomod-examples'},
-                          { text: "MonoMod Docs", link: '/dev/fundamentals/patching-code/monomod-documentation'},
-                        ]
+                        link: '/dev/fundamentals/patching-code'
                       }
                   ]
                 },
@@ -179,24 +162,7 @@ export default defineConfig({
                   collapsed: false,
                   items: [
                     { text: 'Custom Configs', link: '/dev/intermediate/custom-configs' },
-                    { text: 'Custom Config Syncing', link: '/dev/intermediate/custom-config-syncing' },
                     { text: 'Asset Bundling', link: '/dev/intermediate/asset-bundling' },
-                  ]
-                },
-                {
-                  text: 'Advanced',
-                  collapsed: false,
-                  items: [
-                    {
-                      text: 'Networking',
-                      // link: '/dev/advanced/networking/',
-                      collapsed: true,
-                      items: [
-                        { text: 'Dev Tools', link: '/dev/advanced/networking/dev-tools'},
-                        { text: 'Object Behaviour', link: '/dev/advanced/networking/objects'},
-                        { text: 'Global Messaging', link: '/dev/advanced/networking/messaging'},
-                      ]
-                    },
                   ]
                 }
               ]
@@ -204,92 +170,13 @@ export default defineConfig({
             { 
               text: 'Modding APIs', 
               items: [
-                { text: 'Overview', link: '/dev/apis/overview' },
-                {
-                  text: 'Asset APIs',
-                  collapsed: false,
-                  items: [
-                    { text: 'CustomSounds', link: '/dev/apis/customsounds'},
-                  ]
-                },
-                {
-                  text: 'Programming APIs',
-                  collapsed: false,
-                  items: [
-                    { 
-                      text: 'LethalLib', 
-                      link: '/dev/apis/lethallib',
-                      collapsed: true,
-                      items: [
-                        { text: 'Custom Scrap', link: '/dev/apis/lethallib/customscrap'},
-                        {
-                          text: 'Custom Enemies',
-                          link: '/dev/apis/lethallib/custom-enemies/overview',
-                          collapsed: true,
-                          items: [
-                            { text: '3D Modeling With Blender', link: '/dev/apis/lethallib/custom-enemies/blender-resources'},
-                            { text: 'Unity Project', link: '/dev/apis/lethallib/custom-enemies/unity-project'},
-                            { text: 'Coding Our AI', link: '/dev/apis/lethallib/custom-enemies/coding-ai'},
-                          ]
-                        },
-                      ]
-                    },
-                    {
-                      text: 'Configurable Company',
-                      link: '/dev/apis/configurable-company',
-                      collapsed: true,
-                      items: [
-                        {
-                          text: 'Developing Pages',
-                          link: '/dev/apis/configurable-company/developing-pages'
-                        },
-                        {
-                          text: 'Developing Categories',
-                          link: '/dev/apis/configurable-company/developing-categories'
-                        },
-                        {
-                          text: 'Developing Configurations',
-                          link: '/dev/apis/configurable-company/developing-configs'
-                        },
-                        {
-                          text: 'Event Listening',
-                          link: '/dev/apis/configurable-company/event-listening'
-                        }
-                      ]
-                    },
-                    {
-                      text: 'CSync',
-                      link: '/dev/apis/csync',
-                      collapsed: true,
-                      items: [
-                        { text: 'Usage Guide', link: '/dev/apis/csync/usage-guide' },
-                        { text: 'Usage Guide (v4)', link: '/dev/apis/csync/v4-usage-guide' },
-                        {
-                          text: 'Outdated',
-                          link: '/dev/apis/csync/outdated',
-                          collapsed: true,
-                          items: [
-                            { text: 'Usage Guide (v3)', link: '/dev/apis/csync/outdated/v3-usage-guide' }, 
-                            { text: 'Migrating from v1', link: '/dev/apis/csync/outdated/migration-from-v1' },
-                            { text: 'Usage Guide (v1)', link: '/dev/apis/csync/outdated/v1-usage-guide'},
-                            { text: 'Troubleshooting', link: '/dev/apis/csync/outdated/troubleshooting' }
-                          ]
-                        },
-                      ]
-                    },
-                    {
-                      text: 'StaticNetcodeLib',
-                      link: '/dev/apis/static-netcode'
-                    }
-                  ]
-                }
+                { text: 'Overview', link: '/dev/apis/overview' }
               ]
             },
             {
               text: 'Other Resources',
               items: [
-                /*{ text: 'Frequently Asked Questions', link: '/dev/extras/faq' },*/
-                { text: 'Contributing Translations', link: '/contribute/translating-the-wiki' },
+                { text: 'Frequently Asked Questions', link: '/extras/faq'},
                 { text: 'Contributing Articles', link: '/contribute/writing-articles' },
                 { text: 'About', link: '/extras/about' }
               ]
@@ -301,10 +188,10 @@ export default defineConfig({
     externalLinkIcon: true,
     outline: 'deep',
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/LethalCompany/ModdingWiki' }
+      { icon: 'github', link: 'https://github.com/misterbubb/ModdingWiki' }
     ],
     editLink: {
-      pattern: 'https://github.com/LethalCompany/ModdingWiki/edit/main/docs/:path',
+      pattern: 'https://github.com/misterbubb/ModdingWiki/edit/main/docs/:path',
     },
     docFooter: {
       prev: false,

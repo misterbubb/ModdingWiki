@@ -1,7 +1,7 @@
 ---
 prev: false
 next: true
-description: An intermediate overview of how to implement custom configs for your Lethal Company mods.
+description: An intermediate overview of how to implement custom configs for your Crawlspace 2 mods.
 ---
 
 # Custom Configs
@@ -190,6 +190,4 @@ class MyModConfig
 
 ## Conclusion
 
-Now you have config files for your mods! If it's extremely important that your mod has a config value that's the same for every player, you may want to consider reading the page on [custom config syncing](/dev/intermediate/custom-config-syncing).
-
-Alternatively, you might want to use an easy-to-use library for syncing configs, like [CSync](/dev/apis/csync).
+Now you have config files for your mods! For more advanced configuration options, check out the [BepInEx Configuration Documentation](https://docs.bepinex.dev/articles/dev_guide/plugin_tutorial/4_configuration.html).
