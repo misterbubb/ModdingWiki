@@ -6,7 +6,9 @@ description: Get up and running with modifications to Crawlspace 2 to enhance yo
 
 # Beginner's Guide
 
-Crawlspace 2 is a VR horror game by Kiririn, [available on Steam](https://store.steampowered.com/app/2258670/Crawlspace_2/).
+Crawlspace 2 is a VR horror game by Kiririn, [available on Steam](https://store.steampowered.com/app/2258670/Crawlspace_2/) and [Meta Quest](https://www.meta.com/experiences/crawlspace-2/8281672365191138/).
+
+This wiki focuses on modding the PC (Steam) version. Quest modding is not currently supported.
 
 This wiki serves as a source of documentation and tutorials for various unofficial mods created to enhance your experience.
 

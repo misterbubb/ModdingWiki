@@ -16,7 +16,9 @@ Yes, BepInEx is the mod loader that allows mods to run in Crawlspace 2. You'll n
 
 ## Do mods work with the Quest version? {#quest-version}
 
-Crawlspace 2 is only available on PC (Steam). There is no Quest version of the game.
+Crawlspace 2 is available on both PC (Steam) and Meta Quest. However, modding is currently only supported on the PC version. The Quest version exists but has no modding tools or community mods available yet.
+
+This wiki focuses exclusively on PC modding.
 
 ## Does (X Mod) require everybody to have it installed? {#require-all-to-install}
 
