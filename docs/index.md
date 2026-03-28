@@ -13,7 +13,7 @@ hero:
       link: /overview
     - theme: alt
       text: Edit on GitHub
-      link: https://github.com/LethalCompanyCommunity/ModdingWiki
+      link: https://github.com/misterbubb/ModdingWiki
 
 features:
   - title: Installing Mods

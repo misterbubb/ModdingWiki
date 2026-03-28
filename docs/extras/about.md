@@ -24,7 +24,7 @@ Adapted for Crawlspace 2 by the community.
 
 ### Open Source and Privacy
 
-[This guide is open source on GitHub](https://github.com/LethalCompanyCommunity/ModdingWiki). It is licensed under the [ISC License](https://github.com/LethalCompanyCommunity/ModdingWiki/blob/master/LICENSE.md).
+[This guide is open source on GitHub](https://github.com/misterbubb/ModdingWiki). It is licensed under the [ISC License](https://github.com/misterbubb/ModdingWiki/blob/main/LICENSE.md).
 
 Vitepress wiki build pages are based on [bsmg.wiki](https://bsmg.wiki), which is licensed under the [MIT LICENSE](https://github.com/bsmg/wiki/blob/master/LICENSE).
 

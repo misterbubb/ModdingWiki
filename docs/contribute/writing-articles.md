@@ -10,7 +10,7 @@ Thank you for deciding to contribute articles to this wiki! This guide will help
 
 ## Forking the GitHub Repository {#forking-the-repo}
 
-In order to send a Pull Request (PR) to the wiki to request your article to be added, you have to fork the [ModdingWiki repository](https://github.com/LethalCompanyCommunity/ModdingWiki) (repo). 
+In order to send a Pull Request (PR) to the wiki to request your article to be added, you have to fork the [ModdingWiki repository](https://github.com/misterbubb/ModdingWiki) (repo). 
 
 To fork the wiki, click the `Fork` button on the webpage, then click `Create fork`.
 
